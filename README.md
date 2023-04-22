@@ -11,5 +11,8 @@ $ dd if=/dev/urandom of=sample bs=1G count=1
 <output truncated>
 
 $ cat sample | prog | cat > /dev/null
-[prog] Transferred 1.00 GiB, avg 1.01 GiB/s
+[prog] Elapsed 989.505407ms, transferred 1.00 GiB, avg 1.01 GiB/s
+
+$ watch -n 1 ls -la | prog | cat > /dev/null
+[prog] Elapsed 19.0s, transferred 1.00 KiB, avg 53.86 B/s
 ```
